@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg,
+            hsl(240deg 100% 20%) 0%,
+            hsl(253deg 98% 24%) 13%,
+            hsl(260deg 96% 28%) 25%,
+            hsl(264deg 94% 32%) 37%,
+            hsl(268deg 93% 36%) 50%,
+            hsl(272deg 92% 40%) 63%,
+            hsl(275deg 93% 44%) 75%,
+            hsl(278deg 96% 47%) 87%,
+            hsl(281deg 100% 50%) 100%);
+    padding: 10px;
+
+}
+
+.to-do-app {
+
+    width: 100%;
+    max-width: 540px;
+    /* background: #fff; */
+    background-image: linear-gradient(90deg,
+            hsl(239deg 88% 83%) 0%,
+            hsl(224deg 93% 81%) 11%,
+            hsl(214deg 90% 79%) 22%,
+            hsl(208deg 83% 78%) 33%,
+            hsl(202deg 73% 77%) 44%,
+            hsl(198deg 62% 78%) 56%,
+            hsl(193deg 49% 79%) 67%,
+            hsl(187deg 36% 81%) 78%,
+            hsl(179deg 22% 84%) 89%,
+            hsl(170deg 9% 87%) 100%);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    filter: drop-shadow(-45px 0px 100px #0f0722);
+
+}
+
+.to-do-app h2 {
+
+    /* color: black; */
+    background: -webkit-linear-gradient(95deg,
+            hsl(238deg 96% 36%) 0%,
+            hsl(252deg 90% 39%) 13%,
+            hsl(258deg 90% 41%) 25%,
+            hsl(263deg 91% 43%) 37%,
+            hsl(268deg 92% 45%) 50%,
+            hsl(271deg 93% 46%) 63%,
+            hsl(275deg 95% 48%) 75%,
+            hsl(278deg 97% 49%) 87%,
+            hsl(281deg 100% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.to-do-app h2 img {
+
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-image: linear-gradient(95deg,
+            hsl(238deg 96% 36%) 0%,
+            hsl(252deg 90% 39%) 13%,
+            hsl(258deg 90% 41%) 25%,
+            hsl(263deg 91% 43%) 37%,
+            hsl(268deg 92% 45%) 50%,
+            hsl(271deg 93% 46%) 63%,
+            hsl(275deg 95% 48%) 75%,
+            hsl(278deg 97% 49%) 87%,
+            hsl(281deg 100% 50%) 100%);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    width: 140px;
+    background-image: linear-gradient(95deg,
+            hsl(238deg 96% 36%) 0%,
+            hsl(252deg 90% 39%) 13%,
+            hsl(258deg 90% 41%) 25%,
+            hsl(263deg 91% 43%) 37%,
+            hsl(268deg 92% 45%) 50%,
+            hsl(271deg 93% 46%) 63%,
+            hsl(275deg 95% 48%) 75%,
+            hsl(278deg 97% 49%) 87%,
+            hsl(281deg 100% 50%) 100%);
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 16px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+
+}
+
+ul li span {
+
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+
+    background: #edeef0;
+}
+
+
+#completed {
+    width: 100%;
+    max-width: 540px;
+    background: transparent;
+    margin: 100px auto 20px;
+    padding: 9px 30px 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+@media screen and (max-width: 380px) {
+    input {
+
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 0px;
+    }
+}
